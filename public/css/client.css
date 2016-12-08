@@ -1,0 +1,172 @@
+html,body{width:100%;margin:0;padding:0;}
+*{margin:0;padding: 0}
+.wrap{text-align: center;width:100%;overflow: hidden;padding-top:1rem;}
+.warp h1{text-align: center;}
+.qrcode img{width: 320px;height: 320px;}
+.blue {
+    width: 300px;
+    height: 40px;
+    color: #d9eef7;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.blue:active {
+    color: #80bed6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+    background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+.input-name{
+    width: 300px;
+    height: 40px;
+    box-sizing : border-box;
+    margin-bottom: 40px;
+    padding: 5px;
+}
+.mask{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 10;
+}
+.mask .center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform : translate(-50%,-50%);
+}
+
+.wrap .list a{color:#999;text-decoration: none;display: block;line-height:30px;}
+
+/*game box*/
+.game{
+    display:flex;
+    display: -webkit-flex;
+    width:15rem;
+    height:15rem;
+    margin:0 auto;
+    border-radius: 10px;
+    background: #FCFCFC;
+    box-shadow: 0px 0px 8px #777 inset;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+    overflow: hidden;
+}
+.game_inner{
+    display: flex;
+    display: -webkit-flex;
+    flex-grow:1;
+    -webkit-flex-grow:1;
+}
+.game_inner .block{
+    flex-grow:1;
+    -webkit-flex-grow:1;
+    border-color: rgb(222,222,222);
+    border-style: solid;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    justify-content:center;
+    -webkit-justify-content:center;
+    align-items:center;
+    -webkit-align-items:center;
+    height:33.33%;
+    position: relative;
+}
+
+.game_inner:nth-child(1) .block:nth-child(1){
+    border-top:none;
+    border-left:none;
+}
+.game_inner:nth-child(1) .block:nth-child(2){
+    border-top:none;
+}
+.game_inner:nth-child(1) .block:nth-child(3){
+    border-top:none;
+    border-right:none;
+}
+.game_inner:nth-child(2) .block:nth-child(1){
+    border-left:none;
+}
+.game_inner:nth-child(2) .block:nth-child(3){
+    border-right:none;
+}
+.game_inner:nth-child(3) .block:nth-child(1){
+    border-bottom:none;
+    border-left:none;
+}
+.game_inner:nth-child(3) .block:nth-child(2){
+    border-bottom:none;
+}
+.game_inner:nth-child(3) .block:nth-child(3){
+    border-right:none;
+    border-bottom:none;
+}
+.game_inner .block .x{
+    width:80%;
+    height:80%;
+    position: absolute;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.game_inner .block .x:before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:5px;
+    background:#488fda;
+    top:50%;
+    left:0;
+    margin-top:-2.5px;
+}
+.game_inner .block .x:after{
+    content: "";
+    position: absolute;
+    width:5px;
+    height:100%;
+    background: #488fda;
+    left:50%;
+    top:0;
+    margin-left:-2.5px;
+}
+.game_inner .block .o{
+    position: absolute;
+    width:70%;
+    height:70%;
+    border:5px solid #4ad52e;
+    border-radius:100%;
+}
+
+.player{
+    width:15rem;
+    margin:1rem auto;
+    overflow: hidden;
+}
+.player .x{
+    color:#488fda;
+}
+.player .o{
+    color:#4ad52e;
+}
+.player_me{
+    float:left;
+}
+.player_rival{
+    float-right;
+}
+
+.gametip{text-align: center;font-size:12px;}
+.restart{text-align: center;font-size:1rem;margin-top:1rem;display: block}
