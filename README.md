@@ -1,5 +1,7 @@
 * 手机双拼互动井字棋游戏
 
+利用socket进行双屏互动
+
 下载项目：
 `git clone git@github.com:ZENGzoe/shareScreen.git`
 
